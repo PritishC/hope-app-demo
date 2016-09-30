@@ -1,0 +1,40 @@
+<ion-view title="Details" hide-tabs="true" class="background">
+  <ion-content>
+
+    <!-- Use Videogular when S3/Cloudfront streaming issues are resolved
+    <div class="videogular-container" ng-if="content.video_file">
+      <videogular vg-theme="config.theme">
+        <vg-media vg-src="config.sources" vg-youtube="rel=1;showinfo=1"></vg-media>
+
+        <vg-controls vg-autohide="config.plugins.controls.autoHide" vg-autohide-time="config.plugins.controls.autoHideTime">
+            <vg-play-pause-button></vg-play-pause-button>
+            <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+            <vg-scrub-bar>
+                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            </vg-scrub-bar>
+            <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+            <vg-time-display>{{ totalTime | date:'mm:ss':'+0000' }}</vg-time-display>
+            <vg-volume>
+                <vg-mute-button></vg-mute-button>
+                <vg-volume-bar></vg-volume-bar>
+            </vg-volume>
+            <vg-fullscreen-button></vg-fullscreen-button>
+        </vg-controls>
+      </videogular>
+    </div>
+    -->
+
+    <div class="embed-responsive embed-responsive-16by9">
+      <youtube-video class="embed-responsive-item" video-id="'sMKoNBRZM1M'"></youtube-video>
+    </div>
+    <div class="item item-divider skinny-text item-text-wrap">{{ content.title || university.name }}</div>
+    <div class="padding">
+      <div class="card">
+        <div class="item item-text-wrap" ng-class="{'premium-box': !user.subscribed}">
+          <p ng-bind-html="trustAsHtml(content.description || content.article_content || university.description)"></p>
+          <p ng-if="!user.subscribed" class="subscribe-read"><a href="#" class="button">Subscribe!</a></p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

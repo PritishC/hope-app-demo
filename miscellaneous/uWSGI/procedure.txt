@@ -1,0 +1,6 @@
+1. Make /etc/uwsgi and /etc/uwsgi/vassals
+2. Put jobsapp.ini in the latter and uwsgi-defaults.ini, env_vars in the former.
+3. nginx.conf now has uwsgi_pass instead of the old gunicorn config.
+4. Move UpstartConf/uwsgi.conf into /etc/init.
+
+Voila, you now have a working uwsgi distribution!

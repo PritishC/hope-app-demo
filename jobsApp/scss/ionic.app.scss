@@ -1,0 +1,186 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+// Variables
+
+$text-color: #222;
+
+$blue: #4C7ACA;
+$green: #40AC93;
+$orange: #FF634E;
+$yellow: #FFBB4B;
+$light-grey: #F5F5F5;
+$dark-grey: #BBB2AD;
+$purple-light: #8F7588;
+$purple: #70425D;
+
+$br: 3px;
+
+$wnormal: 400;
+$wbold: 500;
+$wbolder: 600;
+
+
+// Components
+
+body {
+    color: $text-color;
+}
+
+a {
+    color: $blue;
+}
+
+.bar.bar-positive {
+    border: 0;
+    background: $blue;
+    color: #fff;
+    height: 45px;
+}
+
+.btn {
+    border: 0;
+    background: $blue;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-green {
+    background: $green;
+}
+
+.btn-orange {
+    background: $orange;
+}
+
+.tc {
+    text-align: center;
+}
+
+.vc {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+*::-webkit-input-placeholder {
+    color: #666 !important;
+}
+
+
+// Common
+
+.navigate {
+    .tabs {
+        top: 45px;
+        height: 45px;
+        background: $blue;
+        border: 1px solid rgba(17, 17, 17, 0.25);
+    }
+
+    .tabs span {
+        font-size: 15px;
+        line-height: 42px;
+        font-weight: $wbold;
+    }
+
+    .tabs i {
+        display: inline-block;
+        font-size: 15px;
+        padding-right: 4px;
+    }
+}
+
+.screen-hope {
+    .has-header {
+        top: 88px;
+    }
+}
+
+
+// Screen Job Readiness
+
+.screen-jr {
+    .list .item .icon {
+        font-size: 25px;
+    }
+}
+
+// Screen Register & Login
+
+.screen-form {
+    .has-header {
+        top: 0;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    .form-register, .form-login {
+        max-width: 80%;
+        margin: 20px auto;
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+
+        .form-field input {
+            border: 1px solid #ddd;
+            border-radius: $br;
+            min-width: 100%;
+            padding: 0 10px;
+            font-size: 15px;
+            min-height: 40px;
+        }
+    }
+}
+
+// Screen login
+
+.screen-login {
+    .forgot-password {
+        text-align: center;
+
+        .forgot-password-link {
+            text-align: right;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid #4C7ACA;
+            border-radius: 3px;
+            padding: 1px 5px;
+        }
+    }
+}

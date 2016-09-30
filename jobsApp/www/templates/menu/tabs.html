@@ -1,0 +1,23 @@
+<ion-nav-bar class="bar-dark">
+    <ion-nav-back-button class="button-icon ion-arrow-left-c">
+    </ion-nav-back-button>
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+    
+<div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
+  <ion-tabs class="navigate" ng-class="{'tabs-item-hide': $root.hideTabs}">
+
+    <ion-tab title="Job Readiness" href="#/menu/tab/buttons">
+      <ion-nav-view name="job-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Higher Education" href="#/menu/tab/list">
+      <ion-nav-view name="uni-tab"></ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+</div>
+

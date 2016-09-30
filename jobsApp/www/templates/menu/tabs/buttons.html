@@ -1,0 +1,26 @@
+<ion-view class="screen-jr screen-hope background" view-title="Job Readiness">
+  <ion-content>
+    <ion-list ng-if="objectsByCategory">
+      <div class="list" ng-repeat="(category, items) in objectsByCategory">
+        <div class="item item-divider">
+          {{ category }}
+        </div>
+
+        <div ng-repeat="item in items">
+          <div class="item" is-premium="{{ item.is_premium }}" check-premium ng-class="{'no-access':  item.is_premium && !user.subscribed}">
+            <a class="item-icon-left">
+              <i class="icon {{ item.icon }}"></i>
+              {{ item.title }}
+            </a>
+            <span class="item-icon-right">
+              <i ng-if="item.is_premium && !user.subscribed" class="icon ion-ios-locked-outline"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+    <div class="text-center" ng-if="spinner">
+        <ion-spinner style="font-size: 90px;"></ion-spinner>
+    </div>
+  </ion-content>
+</ion-view>

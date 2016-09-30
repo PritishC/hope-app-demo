@@ -1,0 +1,19 @@
+<ion-view class="screen-he screen-hope background" view-title="Higher Education">
+  <ion-content>
+    <ion-list ng-if="universities.length">
+    <div class="list">
+      <div class="item item-divider">
+        Universities for Higher Education
+      </div>  
+      <a class="item item-thumbnail-left" ui-sref="menu.tabs.listitem({content: university})" ng-repeat="university in universities">
+        <img ng-src="{{ university.logo }}">
+        <h2>{{ university.name }}</h2>
+        <p ng-bind="university.short_description"></p>
+      </a>
+    </div>
+    </ion-list>
+    <div class="text-center" ng-if="spinner">
+        <ion-spinner style="font-size: 90px;"></ion-spinner>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,77 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+.DS_Store
+
+# Vim
+*.*.sw[po]
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+db.sqlite3
+
+# Development Machine videos
+videos/
+
+# Ionic Framework
+node_modules
+.tmp
+.sass-cache
+bower_components
+lib
+platforms
+plugins
+*.swp
+*.swo
+*.log
+*.DS_Store
+
+# Static Files
+media/
+
+# Key Pairs
+KeyPairs/
